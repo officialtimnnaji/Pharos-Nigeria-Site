@@ -1,24 +1,32 @@
 {
   "members": [
     {
-      "name": "Kelechi Timothy",
+      "name": "LuxuryNad",
+      "role": "Regional Moderator",
+      "bio": "Oversees Pharos Network activities in Nigeria — coordinating regional events, outreach, and partnerships.",
+      "xHandle": "@LuxuryNad",
+      "image": "https://via.placeholder.com/150"
+    },
+
+    {
+      "name": "Crypto Tiger",
       "role": "Regional Moderator",
       "bio": "Oversees Pharos Network activities in Nigeria — coordinating regional events, outreach, and partnerships.",
       "xHandle": "@LuxuryNad",
       "image": "https://via.placeholder.com/150"
     },
     {
-      "name": "Aisha Bello",
-      "role": "Community Host",
-      "bio": "Hosts weekly builder and engagement sessions for the Pharos Nigeria community.",
-      "xHandle": "@AishaPharos",
+      "name": "Darkfallx",
+      "role": "OG Community member",
+      "bio": "Designs, Writes and Hosts weekly engagement sessions for the Pharos Nigeria community.",
+      "xHandle": "@darkfallx",
       "image": "https://via.placeholder.com/150"
     },
     {
-      "name": "Tunde Adeyemi",
-      "role": "Event Organizer",
-      "bio": "Coordinates Friday and Saturday X-space sessions, ensuring vibrant discussions and quality content.",
-      "xHandle": "@TundeEngage",
+      "name": "Secgen",
+      "role": "OG member",
+      "bio": "Coordinates events and discord ensuring vibrant discussions and quality content.",
+      "xHandle": "@secgen",
       "image": "https://via.placeholder.com/150"
     }
   ]

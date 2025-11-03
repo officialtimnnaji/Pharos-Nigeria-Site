@@ -2,42 +2,41 @@ import { useEffect, useState } from "react";
 
 export default function Events() {
   const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
 
+  // 🟢 Fetch data from your GitHub JSON
   useEffect(() => {
-    // Fetch from local JSON
-    fetch("/src/data/events.json")
-      .then((res) => res.json())
-      .then((data) => setEvents(data))
-      .catch((err) => console.error("Error loading events:", err));
+    fetch(
+      "https://raw.githubusercontent.com/officialtimnnaji/Pharos-Nigeria-Site/main/src/data/events.json"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setEvents(data.events || []);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching events:", error);
+        setLoading(false);
+      });
   }, []);
 
-  return (
-    <section className="p-8">
-      <h1 className="text-3xl font-bold text-pharosGold mb-6 text-center">
-        Weekly Events
-      </h1>
+  if (loading) return <p className="text-center text-gray-400">Loading events...</p>;
 
-      {events.length === 0 ? (
-        <p className="text-center text-gray-400">Loading events...</p>
-      ) : (
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {events.map((event) => (
-            <div
-              key={event.id}
-              className="bg-[#1B1F23] border border-pharosGold/30 rounded-2xl p-5 shadow-lg hover:scale-105 transition-transform"
-            >
-              <h2 className="text-xl font-semibold text-pharosGold mb-2">
-                {event.title}
-              </h2>
-              <p className="text-sm text-gray-400 mb-2">
-                {event.day} • {event.time}
-              </p>
-              <p className="text-gray-300 mb-3">{event.description}</p>
-              <p className="text-sm text-gray-400 italic">Host: {event.host}</p>
-            </div>
-          ))}
-        </div>
-      )}
-    </section>
+  return (
+    <div className="min-h-screen bg-pharosDark text-nigeriaWhite px-6 py-12">
+      <h1 className="text-4xl font-bold text-center mb-10">Upcoming Events</h1>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {events.map((event, index) => (
+          <div key={index} className="bg-white/10 p-6 rounded-2xl shadow-lg">
+            <h2 className="text-2xl font-semibold text-nigeriaGreen">{event.title}</h2>
+            <p className="text-gray-300 mt-2">{event.date}</p>
+            <p className="mt-4">{event.description}</p>
+            <p className="mt-2 text-sm text-gray-400 italic">
+              Host: {event.host}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

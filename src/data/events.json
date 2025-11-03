@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "day": "Monday",
+    "title": "Pharos Nigeria Kickoff Session",
+    "host": "Timothy Kelechi",
+    "description": "Weekly updates and project alignment for community members.",
+    "time": "5:00 PM WAT"
+  },
+  {
+    "id": 2,
+    "day": "Thursday",
+    "title": "Tech Growth Session",
+    "host": "Ada Obi",
+    "description": "Insights into Pharos Network and new Web3 trends.",
+    "time": "6:00 PM WAT"
+  },
+  {
+    "id": 3,
+    "day": "Friday",
+    "title": "Builders & Contributors Hangout",
+    "host": "Kingsley Dafe",
+    "description": "Casual discussions, progress sharing, and future plans.",
+    "time": "7:00 PM WAT"
+  },
+  {
+    "id": 4,
+    "day": "Saturday",
+    "title": "X-Space: Nigeria Community Roundtable",
+    "host": "Pharos Nigeria Team",
+    "description": "Community engagement and project deep dives.",
+    "time": "8:00 PM WAT"
+  }
+]
